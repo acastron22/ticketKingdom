@@ -1,12 +1,11 @@
-package br.com.ticketkingdom.ticketkingdom.Controller;
+package br.com.ticketkingdom.ticketkingdom.controller;
 
 
-import br.com.ticketkingdom.ticketkingdom.model.Ingresso;
+import br.com.ticketkingdom.ticketkingdom.entity.Ingresso;
 import br.com.ticketkingdom.ticketkingdom.repository.IngressoRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @RestController
