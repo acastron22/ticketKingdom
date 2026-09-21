@@ -5,6 +5,7 @@ import br.com.ticketkingdom.ticketkingdom.model.Ingresso;
 import br.com.ticketkingdom.ticketkingdom.repository.IngressoRepository;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -47,5 +48,10 @@ public class IngressoController {
         ingresso.setId(id);
         ingressoRepository.save(ingresso);
 
+    }
+
+    @GetMapping("/buscar")
+    public List<Ingresso> buscar(@RequestParam("evento") String evento) {
+        return ingressoRepository.findByEvento(evento);
     }
 }
